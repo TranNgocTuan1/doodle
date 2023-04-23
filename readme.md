@@ -12,3 +12,9 @@ Requirements
 Installation
 ----------------
 Import the doodle.sql to your database
+
+Users
+----------------
+admin - admin
+tranngoc - tranngoc
+tom - tom
