@@ -1,0 +1,34 @@
+
+{block title}
+    {$event->title}
+{/block}
+
+{block content}
+
+    <h1>{$event->title}</h1>
+    <p>{$event->description}</p>
+    <p>Date: {$event->date}</p>
+    
+    <form n:name="voteForm" method="post">
+        <label>Yes:</label>
+        <input name="vote" type="radio" value="yes">
+        <label>No:</label>
+        <input name="vote" type="radio" value="no">
+        <input type="submit" name="submit" value="Vote">
+    </form>
+
+
+{if $voted == 'yes'}
+    <p>You voted
+    {if isset($row) && isset($row->vote) && $row->vote == 1}
+         yes!</p>
+    {else}
+    no. </p>
+    {/if}
+{elseif $voted == 'no'}
+    <!-- Display something else if the user voted "no" -->
+{/if}
+
+
+
+{/block}

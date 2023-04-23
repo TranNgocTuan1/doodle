@@ -1,0 +1,17 @@
+
+{block content}
+    <h1>Events</h1>
+
+<div n:foreach="$posts as $post" class="post">
+			<div id="post-{$post->id}">
+				<br>
+				<hr>
+				
+				<h2><a n:href="Event:default $post->id">{$post->title}</a></h2>
+				<div>{$post->description}</div>
+				<div class="date">{$post->date|date:'F j, Y'}</div>
+			</div>
+		</div>
+		<a n:href="Create:default">Create event</a>
+		<a n:href="'Sign:out'">Sign out</a>
+{/block}
